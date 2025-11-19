@@ -9,9 +9,13 @@
   "version": "1.0.0",
   "description": "Desenvolvindo durante o CURSO.DEV",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "lint:check": "prettier --check . ",
+    "lint:fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
