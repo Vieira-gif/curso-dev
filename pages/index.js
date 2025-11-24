@@ -1,4 +1,4 @@
-import image from "./svg/builder.png";
+import image from "../svg/builder.png";
 
 function Home() {
   return (
