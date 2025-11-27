@@ -1,4 +1,4 @@
-import image from "../svg/builder.png";
+import image from "../public/svg/builder.png";
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
         Onde define um nova etapa do profissionalismo da jornada na area de
         programação
       </p>
-      <img src='../svg/builder.png' width="500" height="600"></img>
+      <img src={image} width="500" height="600"></img>
     </div>
   );
 }
