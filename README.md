@@ -1,1 +1,1 @@
-Desenvolvivo durante o curso.dev
+Desenvolvivo durante o *[curso.dev](https://curso.dev)*
