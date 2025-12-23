@@ -1,10 +1,19 @@
 import database from "infra/database.js";
 
 async function status(request, response) {
-  const result = await database.query("SELECT 1 + 1;");
-  console.log(result.rows);
+  const updateAt = new Date().toISOString();
+  const pgVersion = await database.query("SELECT version();");
+  const usedConnections = await database.query("SELECT COUNT(*) AS used_connections FROM pg_stat_activity;");
+  const maxConnections = await database.query("SHOW max_connections;");
+
+
   response.status(200).json({
-    status: "Tudo certo, por aqui!",
+    update_at: updateAt,
+    settings: {
+      pg_version: pgVersion.rows[0].version,
+      used_connections: usedConnections.rows[0].used_connections,
+      max_connections: maxConnections.rows[0].max_connections,
+    },
   });
 }
 
