@@ -11,6 +11,8 @@ async function query(queryObject) {
   await client.connect();
   const result = await client.query(queryObject);
   await client.end();
+  console.log("Client has disconnected")
+  
 
   return result;
 }
