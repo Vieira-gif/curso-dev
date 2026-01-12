@@ -30,9 +30,9 @@ test("GET para /api/v1/status max_connection do banco ", async () => {
   expect(reponseBody.settings.max_connections).toBe("100");
 });
 
-test("GET para /api/v1/status used_connections do banco ", async () => {
+test("GET para /api/v1/status openedConnections do banco ", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
 
   const reponseBody = await response.json();
-  expect(reponseBody.settings.used_connections).toBe("20");
+  expect(reponseBody.settings.opened_connections).toEqual(0);
 });
