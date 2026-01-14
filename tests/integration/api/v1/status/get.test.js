@@ -25,7 +25,6 @@ test("GET para /api/v1/status versão do banco pg", async () => {
 
 test("GET para /api/v1/status max_connection do banco ", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
-
   const reponseBody = await response.json();
   expect(reponseBody.settings.max_connections).toBe("100");
 });
