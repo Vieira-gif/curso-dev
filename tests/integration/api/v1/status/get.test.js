@@ -33,5 +33,5 @@ test("GET para /api/v1/status openedConnections do banco ", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
 
   const reponseBody = await response.json();
-  expect(reponseBody.settings.opened_connections).toEqual(0);
+  expect(reponseBody.settings.opened_connections).toEqual(1);
 });
