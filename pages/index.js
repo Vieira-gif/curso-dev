@@ -14,7 +14,6 @@ function Home() {
           <a>https://www.stacklearn.com.br/api/v1/migrations</a>
         </p>
       </section>
-      <img src={image} width="500" height="600"></img>
     </div>
   );
 }
