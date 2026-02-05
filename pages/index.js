@@ -7,11 +7,15 @@ function Home() {
       <section>
         <h2>Endpoint /status</h2>
         <p>
-          <a>https://www.stacklearn.com.br/api/v1/status</a>
+          <a href="https://www.stacklearn.com.br/api/v1/status">
+            https://www.stacklearn.com.br/api/v1/status
+          </a>
         </p>
         <h2>Endpoint /migrations</h2>
         <p>
-          <a>https://www.stacklearn.com.br/api/v1/migrations</a>
+          <a href="https://www.stacklearn.com.br/api/v1/migrations">
+            https://www.stacklearn.com.br/api/v1/migrations
+          </a>
         </p>
       </section>
     </div>
