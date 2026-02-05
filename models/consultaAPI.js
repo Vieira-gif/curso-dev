@@ -1,5 +1,5 @@
-function consome(url) {
-  const response = fetch(url)
+function consome(url, metodo = 'GET') {
+  const response = fetch(url, {method: metodo})
   return response
 }
 
