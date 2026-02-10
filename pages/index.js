@@ -3,7 +3,7 @@ import image from "../public/svg/builder.png";
 function Home() {
   return (
     <div>
-      <h1>Aqui começa a tela de Construção</h1>
+      <h1>Isso é um teste em homologação!</h1>
       <section>
         <h2>Endpoint /status</h2>
         <p>
