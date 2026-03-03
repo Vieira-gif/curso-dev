@@ -1,4 +1,7 @@
 const consulta = require("../../../../../models/consultaAPI.js");
+import orchestrator from "tests/orchestrator.js";
+
+beforeAll(async () => await orchestrator.waitForAllServices())
 
 test("GET para /api/v1/status deve retornar o status", async () => {
   const response = await consulta.func.consome(
