@@ -32,8 +32,3 @@ test("POST para /api/v1/migrations deve retornar o status 200", async () => {
     expect(reponseBody2.length).toBe(0);
 
 });
-
-test("POST para /api/v1/migrations deve retornar o responseBody = 0", async () => {
-
-});
-
