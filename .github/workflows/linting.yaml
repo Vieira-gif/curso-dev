@@ -3,11 +3,7 @@ name: Linting
 on: pull_request
 
 jobs:
-<<<<<<< HEAD
   prettier-check:
-=======
-  prettier:
->>>>>>> 16003e2fe06f3f76035251c7c2a87a7349cbfd33
     name: Prittier
     runs-on: ubuntu-latest
     steps: 
@@ -19,7 +15,6 @@ jobs:
     
       - run: npm ci
 
-<<<<<<< HEAD
       - run: npm run lint:prittier:check
 
     prettier-fix:
@@ -35,6 +30,3 @@ jobs:
       - run: npm ci
 
     - run: npm run lint:prittier:fix
-=======
-      - run: npm run lint:prittier:check
->>>>>>> 16003e2fe06f3f76035251c7c2a87a7349cbfd33
