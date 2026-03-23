@@ -29,5 +29,5 @@ jobs:
     
       - run: npm ci
       
-      - run: npm run lint:eslint:fix
+      - run: npm run lint:eslint:check
   
