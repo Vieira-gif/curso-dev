@@ -1,5 +1,3 @@
-import image from "../public/svg/builder.png";
-
 function Home() {
   return (
     <div>
