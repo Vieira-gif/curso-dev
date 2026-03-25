@@ -20,7 +20,7 @@ test("GET para /api/v1/status deve retornar a data atual no body", async () => {
 test("GET para /api/v1/status versão do banco pg", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
   const reponseBody = await response.json();
-  expect(reponseBody.settings.pg_version).toBe("18.0");
+  expect(reponseBody.settings.pg_version).toBe("16.0");
 });
 
 test("GET para /api/v1/status max_connection do banco", async () => {
