@@ -9,7 +9,7 @@ beforeAll(async () => {
 
 describe("POST /api/v1/migrations", () => {
   describe("Anonymous User", () => {
-    describe("Running pending migrations", () => {
+    describe("Retriving pending migrations", () => {
       test("First run", async () => {
         const response = await consulta.func.consome(
           "http://localhost:3000/api/v1/migrations",
