@@ -7,28 +7,36 @@ beforeAll(async () => {
   await database.query("drop schema public cascade; create schema public;");
 })
 
-test("POST para /api/v1/migrations deve retornar o status 200", async () => {
-  const response = await consulta.func.consome(
-    "http://localhost:3000/api/v1/migrations",
-    'POST'
-  );
+describe("POST /api/v1/migrations", () => {
+  describe("Anonymous User", () => {
+    describe("Running pending migrations", () => {
+      test("First run", async () => {
+        const response = await consulta.func.consome(
+          "http://localhost:3000/api/v1/migrations",
+          "POST"
+        );
 
-  expect(response.status).toBe(201);
-  const reponseBody = await response.json();
+        const reponseBody = await response.json();
 
-  expect(Array.isArray(reponseBody)).toBe(true);
-  expect(reponseBody.length).toBeGreaterThan(0);
+        expect(response.status).toBe(201);
+        expect(Array.isArray(reponseBody)).toBe(true);
+        expect(reponseBody.length).toBeGreaterThan(0);
+      });
 
-  /*********************** */
+      test("Seccond run", async () => {
+        const response = await consulta.func.consome(
+          "http://localhost:3000/api/v1/migrations",
+          "POST"
+        );
 
-    const response2 = await consulta.func.consome(
-      "http://localhost:3000/api/v1/migrations",
-      "POST",
-    );
+        const reponseBody = await response.json();
 
-    const reponseBody2 = await response2.json();
-
-    expect(Array.isArray(reponseBody2)).toBe(true);
-    expect(reponseBody2.length).toBe(0);
-
+        expect(Array.isArray(reponseBody)).toBe(true);
+        expect(reponseBody.length).toBe(0);
+      });
+    });
+  });
 });
+
+
+
