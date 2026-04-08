@@ -22,7 +22,6 @@ function UpdateAt() {
   });
 
   let StatusDataBase = "Carregando...";
-  
 
   if (!isLoading && data) {
     return (
@@ -37,10 +36,7 @@ function UpdateAt() {
 
   return (
     <>
-      <p>Update_At: {StatusDataBase}</p>
-      <p>pg_Version: {StatusDataBase}</p>
-      <p>max_connections: {StatusDataBase}</p>
-      <p>opened_connections: {StatusDataBase}</p>
+      <p>{StatusDataBase}</p>
     </>
   );
 }
