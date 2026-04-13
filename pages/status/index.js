@@ -21,7 +21,7 @@ function UpdateAt() {
     refreshInterval: 200,
   });
 
-  let StatusDataBase = "Carregando...";
+  const StatusDataBase = "Carregando...";
 
   if (!isLoading && data) {
     return (
