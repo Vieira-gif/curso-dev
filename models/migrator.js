@@ -6,7 +6,7 @@ const defaultMigrationOptions = {
   dryRun: true,
   dir: resolve("infra", "migrations"),
   direction: "up",
-  verbose: true,
+  log: () => {},
   migrationsTable: "pgmigrations",
 };
 
@@ -26,7 +26,7 @@ async function listPedingMigrations() {
   }
 }
 
-async function runPeddingMigrations() {
+async function runPedingMigrations() {
   let dbClient;
 
   try {
@@ -48,7 +48,7 @@ async function runPeddingMigrations() {
 
 const migrator = {
   listPedingMigrations,
-  runPeddingMigrations,
+  runPedingMigrations,
 };
 
 export default migrator
